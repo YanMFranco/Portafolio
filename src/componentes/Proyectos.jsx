@@ -17,13 +17,13 @@ const Proyectos = () => {
             <div className="item2">
                 <div className='Desplazamiento'>
                     <div>
-                        <Link to="/" >
+                        <Link to="/Inicio" >
                             <p className="flecha">↑</p>
                         </Link >
                     </div>
 
                     <div>
-                        <Link to={"/Proyectos"} >
+                        <Link to={"/Contacto"} >
                             <p className="flecha">↓</p>
                         </Link >
                     </div>
