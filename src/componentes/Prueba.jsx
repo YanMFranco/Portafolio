@@ -1,6 +1,7 @@
-import './css/SobreMi.css'
+import './css/Prueba.css';
 
-const SobreMi = ({ onClose }) => {
+const Prueba = ({ onClose }) => {
+
     return (
         <div className='Modal-container'>
             <button type="button" onClick={onClose} className='botonSobre'>X</button>
@@ -28,4 +29,4 @@ const SobreMi = ({ onClose }) => {
     )
 }
 
-export default SobreMi;
+export default Prueba;

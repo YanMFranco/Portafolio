@@ -5,16 +5,18 @@ import Inicio from './componentes/Inicio';
 import Proyectos from './componentes/Proyectos';
 import Contacto from './componentes/Contacto';
 import Portada from './componentes/Portada';
+import Prueba from './componentes/Prueba';
 
 function App() {
   return (
     <div className='App'>
       <Headers />
       <Routes>
-        <Route path='/' element={<Portada />} />
-        <Route path='/Inicio' element={<Inicio />} />
-        <Route path='/Proyectos' element={<Proyectos />} />
-        <Route path='/Contacto' element={<Contacto />} />
+        <Route exact path='/' element={<Portada />} />
+        <Route exact path='/Inicio' element={<Inicio />} />
+        <Route exact path='/Proyectos' element={<Proyectos />} />
+        <Route exact path='/Contacto' element={<Contacto />} />
+        <Route exact path='/Prueba' element={<Prueba />} />
       </Routes>
     </div>
 

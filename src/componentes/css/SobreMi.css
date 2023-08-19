@@ -1,17 +1,14 @@
-.contenedor-sobremi {
+.Modal-container{
+    height: 90%;
+    width: 90%;
+    background-color: black;
     border-radius: 10px;
-    margin: 0 auto;
-    width: 75em;
-    height: 40em;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    background-color: rgba(0, 0, 0);
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
 }
 
-.botonSobre {
+.Modal-container .botonSobre{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -27,21 +24,44 @@
     transition: background-color 0.3s ease;
 }
 
-.botonSobre:hover {
+.Modal-container .botonSobre:hover {
     background-color: darkred;
 }
 
-.contenedor-sobremi p {
-    margin: 60px 20px;
-    font-size: 15px;
-    color: #ffffff;
-}
-
-.contenedor-sobremi h3 {
+.Modal-container h3 {
     font-size: 20px;
     /* Ajusta el tamaño según tus necesidades */
     color: #000000;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #203399, 0 0 70px #3104fc, 0 0 80px #3104fc, 0 0 100px #3104fc, 0 0 150px #3104fc;
     /* Estilo de luces de neón */
     font-family: 'Oswald', sans-serif;
+}
+
+.Modal-container li{
+    list-style: none;
+}
+
+.Modal-container p{
+    font-size: 15px;
+    color: #ffffff;
+}
+
+@media (max-width: 599px) {
+    .Modal-container{
+        padding: 5px;
+    }
+    .Modal-container p{
+        font-size: 10px;
+    }
+    .Modal-container h3 {
+        font-size: 15px;
+    }
+    .Modal-container .botonSobre{
+        position: absolute;
+        top: 35px;
+        right: 25px;
+        background-color: red;
+        padding: 4px 8px;
+        font-size: 15px;
+    }
 }

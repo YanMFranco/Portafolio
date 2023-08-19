@@ -1,57 +1,55 @@
-.navbar {
-  max-height: 60px;
+.Headers-container{
+  display: grid;
+  grid-template-columns: auto auto;
   background-color: #333;
   color: #fff;
-  padding: 10px;
   font-family: 'Oswald', sans-serif;
+  height: 70px;
 }
 
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.navbar li {
-  margin: 0 10px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.navbar a:hover {
-  text-decoration: none;
-  color: #3104fc;
-}
-
-.contenedor{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contenedor div{
-  align-items: center;
-}
-
-.img-nav{
-  display: flex;
-  align-items: center;
-}
-
-.img-nav img{
+.Headers-container .item1 img{
   background-color: transparent;
   width: 60px;
   height: 40px;
-  border-radius: 50%;
-  margin: 0 1px;
 }
 
-.navbar li.active a {
+.Headers-container .item1{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.Headers-container .item2{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.Headers-container .item2 li,a{
+  list-style-type: none;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+.Headers-container a:hover{
   text-decoration: none;
   color: #3104fc;
+}
+
+@media (max-width: 599px) {
+  /* Estilos específicos para pantallas pequeñas */
+  .Headers-container .item1{
+      display:none;
+  }
+  .Headers-container{
+      display: grid;
+      grid-template-columns: auto;
+      height: 40px;
+  }
+  .Headers-container .item2{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  }
 }

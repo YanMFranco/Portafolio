@@ -1,8 +1,36 @@
-.Pprincipal {
+.Portada-container {
     height: 100vh;
+    display: grid;
+    grid-template-columns: auto 150px;
+    grid-template-rows: 150px auto;
 }
 
-.Pprincipal h2{
+.item2 p{
+    background-color: #007bff;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    animation: jumpAnimation 1s ease-in-out infinite;
+}
+
+.item2 p:hover{
+    color: #000000;
+}
+
+.item3 .bienvenido{
+    width: 850px;
+    height: 200px;
+    background-color: rgb(6, 105, 185);
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: -160px;
+    border-radius: 20px;
+}
+
+.Portada-container h2 {
     font-size: 50px;
     /* Ajusta el tamaño según tus necesidades */
     color: #000000;
@@ -11,46 +39,20 @@
     font-family: 'Oswald', sans-serif;
 }
 
-.Pprincipal a{
-    text-decoration: none;
-}
-
-.Pprincipal .flechaAbajo {
-    background-color: #007bff;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    /* Posicionar el botón absolutamente */
-    top: 13em;
-    /* Ajustar la posición vertical */
-    left: 92.7%;
-    /* Ajustar la posición horizontal */
-    transform: translateX(-50%);
-    /* Centrar horizontalmente */
-    transition: transform 0.10s ease;
-    animation: jumpAnimation 1s ease-in-out infinite;
-}
-
-.Pprincipal .flechaAbajo:hover {
-    color: rgb(0, 0, 0);
-}
-
-.Pprincipal .bienvenido {
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
+.Portada-container .item2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
     display: flex;
-    flex-direction: column;
-    width: 850px;
-    height: 200px;
-    background-color: rgb(6, 105, 185);
-    font-family: 'Oswald', sans-serif;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.Portada-container .item3 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 
 @keyframes jumpAnimation {
@@ -62,5 +64,30 @@
 
     50% {
         transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 599px) {
+    .Portada-container {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+    }
+
+    .item3 .bienvenido{
+        width: 350px;
+        height: 200px;
+        font-size: 25px;
+        margin-top: 0px;
+        padding: 10px;
+    }
+    .Portada-container .item2 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    .item2 p{
+        margin-bottom: 0px;
     }
 }

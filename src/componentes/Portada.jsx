@@ -3,16 +3,21 @@ import './css/Portada.css';
 
 const Portada = () => {
     return (
-        <div className='Pprincipal'>
-            <div>
+        <div className="Portada-container">
+            <div className='item1'>
                 <h2 className="neon-title">Bienvenid@ a mi portafolio</h2>
             </div>
-            <div className='bienvenido'>
-                <p>¡Hola! Soy Yan Franco Moreno Henao, y este es mi portafolio. Aquí puedes conocer más sobre mí y mis proyectos, acompañame...</p>
+            <div className='item2'>
+                <Link to={"/Inicio"} className="flechaAbajo">
+                    <p>↓</p>
+                </Link >
             </div>
-            <Link to={"/Inicio"} className="flechaAbajo">
-                ↓
-            </Link >
+            <div className='item3'>
+                <div className='bienvenido'>
+                    <p >¡Hola! Soy Yan Franco Moreno Henao, y este es mi portafolio. Aquí puedes conocer más sobre mí y mis proyectos, acompañame...</p>
+                </div>
+
+            </div>
         </div>
     )
 }

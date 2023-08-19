@@ -11,25 +11,19 @@ const Headers = () => {
     const location = useLocation();
 
     return (
-        <div>
-            <header className="navbar">
-                <nav className='contenedor'>
-                    <div className='img-nav'>
-                        <img src={logoNode} alt="Logo React" className="logos" />
-                        <img src={logoReact} alt="Logo React" className="logos" />
-                        <img src={logoSql} alt="Logo React" className="logos" />
-                        <img src={logoJava} alt="Logo React" className="logos" />
-
-                    </div>
-
-                    <ul>
-                        <li className={location.pathname === '/Inicio' ? 'active' : ''}><Link  to={"/Inicio"}>Inicio</Link ></li>
-                        <li className={location.pathname === '/Proyectos' ? 'active' : ''}><Link  to={"/Proyectos"}>Proyectos</Link ></li>
-                        <li className={location.pathname === '/Contacto' ? 'active' : ''}><Link  to={"/Contacto"}>Contacto</Link ></li>
-                    </ul>
-                </nav>
-            </header>
+        <div className="Headers-container">
+            <div className='item1'>
+                <img src={logoNode} alt="Logo React" className="logos" />
+                <img src={logoReact} alt="Logo React" className="logos" />
+                <img src={logoSql} alt="Logo React" className="logos" />
+                <img src={logoJava} alt="Logo React" className="logos" />
+            </div>
+            <div className='item2'>
+                <li className={location.pathname === '/Inicio' ? 'active' : ''}><Link to={"/Inicio"}>Inicio</Link ></li>
+                <li className={location.pathname === '/Proyectos' ? 'active' : ''}><Link to={"/Proyectos"}>Proyectos</Link ></li>
+                <li className={location.pathname === '/Contacto' ? 'active' : ''}><Link to={"/Contacto"}>Contacto</Link ></li></div>
         </div>
+
     )
 
 }
