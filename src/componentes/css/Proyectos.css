@@ -1,10 +1,11 @@
-.principal {
+.Proyectos-container{
     height: 100vh;
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto 150px;
+    grid-template-rows: 230px auto;
 }
 
-.principal .introduccion {
+.Proyectos-container .introduccion{
     background-color: rgb(6, 105, 185);
     margin:auto;
     font-family: 'Oswald', sans-serif;
@@ -13,68 +14,62 @@
     width: 700px;
     height: 150px;
     border-radius: 10px;
+    margin-top: 30px;
+    color: white;
 }
 
-.proyectos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.proyectos img{
+.item3 .img-Proyectos{
     width: 200px;
     margin: 0 30px;
     height: 200px;
     border-radius: 50px;
 }
 
-.principal .flechaAbajo{
-    background-color: #007bff;
+.Proyectos-container .item3{
+    margin-top: -50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-size: 40px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    /* Posicionar el botón absolutamente */
-    top: 13em;
-    /* Ajustar la posición vertical */
-    left: 95%;
-    /* Ajustar la posición horizontal */
-    transform: translateX(-50%);
-    /* Centrar horizontalmente */
-    transition: transform 0.10s ease;
 }
 
-.principal .flechaArriba{
-    background-color: #007bff;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    /* Posicionar el botón absolutamente */
-    top: 2.5em;
-    /* Ajustar la posición vertical */
-    left: 95%;
-    /* Ajustar la posición horizontal */
-    transform: translateX(-50%);
-    /* Centrar horizontalmente */
-    transition: transform 0.10s ease;
+.Proyectos-container .Desplazamiento{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 90%;
 }
 
-.principal .flechaAbajo:hover{
-    color: rgb(0, 0, 0);
+.Proyectos-container .item2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
-.principal .flechaArriba:hover{
-    color: rgb(0, 0, 0);
-}
-
-.principal a{
-    text-decoration: none;
+@media (max-width: 599px) {
+    .Proyectos-container{
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    .Proyectos-container .introduccion{
+        font-size: 20px;
+        padding: 5px;
+        width: 300px;
+        height: 250px;
+    }
+    .item3 .img-Proyectos{
+        width: 100px;
+        margin: 0 30px;
+        height: 100px;
+    }
+    .Proyectos-container .item3{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
 }

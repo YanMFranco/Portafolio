@@ -1,16 +1,25 @@
-.contactame{
-    min-height: 100vh;
+.Contacto-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 150px;
+    grid-template-rows: 150px auto;
 }
-.contactame h1{
+.Contacto-container .item1 h1{
     font-size: 50px;
-    /* Ajusta el tamaño según tus necesidades */
     color: #000000;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3104fc, 0 0 70px #3104fc, 0 0 80px #3104fc, 0 0 100px #3104fc, 0 0 150px #3104fc;
-    /* Estilo de luces de neón */
     font-family: 'Oswald', sans-serif;
 }
 
-.contactame .flechaArriba{
+.Contacto-container .item2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+
+.Contacto-container .flechaArriba p{
     background-color: #007bff;
     color: white;
     font-size: 40px;
@@ -18,69 +27,75 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    position: absolute;
-    /* Posicionar el botón absolutamente */
-    top: 2.5em;
-    /* Ajustar la posición vertical */
-    left: 95%;
-    /* Ajustar la posición horizontal */
-    transform: translateX(-50%);
-    /* Centrar horizontalmente */
-    transition: transform 0.10s ease;
 }
 
-.contactame .flechaArriba:hover{
-    color: rgb(0, 0, 0);
-}
-.contactame p{
-    font-size: 20px;
-    color: #ffffff;
-    line-height: 1.3;
-}
-
-.logoContacto{
-    width: 50px;
-    height: 50px;
-}
-
-.redesSociales p{
-    font-family: 'Oswald', sans-serif;
-    font-size: 23px;
-}
-
-.contactame a{
-    text-decoration: none;
-}
-
-.redesSociales{
+.Contacto-container .redesSociales{
     margin: auto;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 850px;
+    width: 920px;
     height: 250px;
+    color: white;
     background-color: rgb(6, 105, 185);
 }
 
-.redesSociales ul {
-    
+.Contacto-container .logoContacto{
+    width: 50px;
+    height: 50px;
+}
+
+.Contacto-container .redesSociales p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+}
+
+.Contacto-container .redesSociales ul {
     list-style-type: none;
-    display: flex; /* Convertir la lista en un contenedor flex */
+    display: flex; 
     justify-content: center;
-    gap: 20px; /* Ajustar el espacio entre los elementos li */
-  }
-  
-  .redesSociales li {
-    display: flex; /* Permitir alinear verticalmente el contenido dentro de los elementos li */
-    align-items: center; /* Centrar verticalmente el contenido dentro de los elementos li */
-  }
+    margin-left: -40px;
+}
 
-  .redesSociales a,li{
-    color: #fff;
-  }
+.Contacto-container .redesSociales li {
+    display: flex;
+    align-items: center;
+}
 
-  .redesSociales img{
-    color: #fff;
-    margin-right: 5px;
-  }
+
+
+@media (max-width: 599px) {
+    .Contacto-container{
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    .Contacto-container .redesSociales{
+        width: 300px;
+        height: 500px;
+        margin-bottom: 30px;
+    }
+    .Contacto-container .redesSociales ul {
+        display: flex; 
+        flex-direction: column;
+    }
+    .Contacto-container .item3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+    }
+    .Contacto-container .flechaArriba p{
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        margin-left: 50px;
+    }
+    .Contacto-container .redesSociales li {
+        margin-top: 20px;
+    }
+    .Contacto-container .item1 h1{
+        font-size: 40px;
+    }
+}

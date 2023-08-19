@@ -8,11 +8,16 @@ import { Link } from 'react-router-dom';
 
 const Contacto = () => {
     return (
-        <div className='contactame'>
-            <Link  to="/Proyectos" className="flechaArriba">
-                ↑
-            </Link >
-            <h1>Contactame...</h1>
+        <div className='Contacto-container'>
+            <div className="item1">
+                <h1>Contactame...</h1>
+            </div>
+            <div className="item2">
+                <Link to="/Proyectos" className="flechaArriba">
+                    <p>↑</p>
+                </Link >
+            </div>
+            <div className="item3">
             <div className='redesSociales'>
                 <p>Ponte en contacto conmigo a través de las redes sociales o el correo electrónico.</p>
                 <ul>
@@ -22,6 +27,7 @@ const Contacto = () => {
                     <li><img src={gmail} alt="logo gmail" className="logoContacto" />Morenofranco77@gmail.com</li>
                     <li><img src={tel} alt="logo telefono" className="logoContacto" />(+57) 3218968485</li>
                 </ul>
+            </div>
             </div>
         </div>
     )

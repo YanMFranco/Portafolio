@@ -7,15 +7,30 @@ import { Link } from 'react-router-dom';
 
 const Proyectos = () => {
     return (
-        <div className="principal">
-            <Link  to="/Inicio" className="flechaArriba">
-                ↑
-            </Link >
-            <p className='introduccion'>Como desarrollador Full Stack, he estado comprometido en desafiar mis habilidades y ampliar mi conocimiento día a día.
-                Me he sumergido en proyectos que abarcan tanto el desarrollo del front-end como del back-end,
-                buscando siempre superar mis límites y ofrecer soluciones sólidas y eficientes.
-            </p>
-            <div className='proyectos'>
+        <div className='Proyectos-container'>
+            <div className="item1">
+                <p className='introduccion'>Como desarrollador Full Stack, he estado comprometido en desafiar mis habilidades y ampliar mi conocimiento día a día.
+                    Me he sumergido en proyectos que abarcan tanto el desarrollo del front-end como del back-end,
+                    buscando siempre superar mis límites y ofrecer soluciones sólidas y eficientes.
+                </p>
+            </div>
+            <div className="item2">
+                <div className='Desplazamiento'>
+                    <div>
+                        <Link to="/" >
+                            <p className="flecha">↑</p>
+                        </Link >
+                    </div>
+
+                    <div>
+                        <Link to={"/Proyectos"} >
+                            <p className="flecha">↓</p>
+                        </Link >
+                    </div>
+
+                </div>
+            </div>
+            <div className="item3">
                 <div>
                     <h2>Clima App</h2>
                     <img src={climapp} alt="Clima app" className="img-Proyectos" />
@@ -33,11 +48,7 @@ const Proyectos = () => {
                     <img src={raya} alt="Juego en raya" className="img-Proyectos" />
                 </div>
             </div>
-            <Link  to="/Contacto" className="flechaAbajo">
-                ↓
-            </Link >
         </div>
-
     )
 }
 
