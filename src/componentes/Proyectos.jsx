@@ -33,19 +33,19 @@ const Proyectos = () => {
             <div className="item3">
                 <div>
                     <h2>Clima App</h2>
-                    <img src={climapp} alt="Clima app" className="img-Proyectos" />
+                    <Link to={"https://clima-app-production.up.railway.app/"}><img src={climapp} alt="Clima app" className="img-Proyectos" /></Link>
                 </div>
                 <div>
                     <h2>Todo list</h2>
-                    <img src={todolist} alt="Todo list" className="img-Proyectos" />
+                    <Link to={"https://todo-list-react-production.up.railway.app/"}><img src={todolist} alt="Todo list" className="img-Proyectos" /></Link>
                 </div>
                 <div>
                     <h2>Juego memoram</h2>
-                    <img src={memoram} alt="Juego memoram" className="img-Proyectos" />
+                    <Link to={"https://juego-memoram-react-production.up.railway.app/"}><img src={memoram} alt="Juego memoram" className="img-Proyectos" /></Link>
                 </div>
                 <div>
                     <h2>Juego en raya</h2>
-                    <img src={raya} alt="Juego en raya" className="img-Proyectos" />
+                    <Link to={"https://juego-en-raya-production.up.railway.app/"}><img src={raya} alt="Juego en raya" className="img-Proyectos" /></Link>
                 </div>
             </div>
         </div>
